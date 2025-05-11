@@ -21,32 +21,29 @@ public class Product {
     private int price;
     private int quantity;
     private LocalDateTime createdAt;
-    private LocalDateTime modifiedAt;
 
-    private Product(String name, String description, int price, int quantity, LocalDateTime createdAt, LocalDateTime modifiedAt) {
+    private Product(String name, String description, int price, int quantity, LocalDateTime createdAt) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.quantity = quantity;
         this.createdAt = createdAt;
-        this.modifiedAt = modifiedAt;
     }
 
-    private Product(Long id, String name, String description, int price, int quantity, LocalDateTime createdAt, LocalDateTime modifiedAt) {
+    private Product(Long id, String name, String description, int price, int quantity, LocalDateTime createdAt) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
         this.quantity = quantity;
         this.createdAt = createdAt;
-        this.modifiedAt = modifiedAt;
     }
 
-    public static Product of(String name, String description, int price, int quantity, LocalDateTime createdAt, LocalDateTime modifiedAt) {
-        return new Product(name, description, price, quantity, createdAt, modifiedAt);
+    public static Product of(String name, String description, int price, int quantity, LocalDateTime createdAt) {
+        return new Product(name, description, price, quantity, createdAt);
     }
 
-    public static Product of(Long id, String name, String description, int price, int quantity, LocalDateTime createdAt, LocalDateTime modifiedAt) {
-        return new Product(id, name, description, price, quantity, createdAt, modifiedAt);
+    public static Product of(Long id, String name, String description, int price, int quantity, LocalDateTime createdAt) {
+        return new Product(id, name, description, price, quantity, createdAt);
     }
 }
