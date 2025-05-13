@@ -14,6 +14,7 @@ public class LocalCacheConfig {
     @Bean
     public CacheManager localCacheManager() {
         CaffeineCacheManager caffeineCacheManager = new CaffeineCacheManager();
+
         caffeineCacheManager.setCaffeine(Caffeine.newBuilder()
                 .expireAfterWrite(Duration.ofSeconds(10))
                 .maximumSize(1000)
